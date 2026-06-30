@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Infrastructure | Vaibhav Kumar</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <header>
+    <nav class="nav-container glass-panel">
+      <a href="index.html" class="logo">Vaibhav<span>Kumar</span></a>
+      <button class="menu-btn" id="menuBtn">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+        <li>
+          <button class="theme-toggle" id="themeToggle">
+            <i class="fa-solid fa-sun"></i>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="section-header">
+      <h1>Get In <span>Touch</span></h1>
+    </div>
+
+    <div class="contact-container">
+      <div class="contact-info">
+        <div class="info-card glass-panel">
+          <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+          <div class="info-details">
+            <p>Direct Communication</p>
+            <!-- Clickable Card Interface for Gmail -->
+<a href="mailto:vaibhavkumarvk143674@gmail.com" class="info-card glass-panel" style="text-decoration: none; display: flex;">
+  <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+  <div class="info-details">
+    <p>Direct Communication</p>
+    <span style="font-size: 1.05rem; color: var(--text-primary); font-weight: 600; transition: color var(--transition-speed);">
+      vaibhavkumarvk143674@gmail.com
+    </span>
+  </div>
+</a>
+
+          </div>
+        </div>
+
+        <div class="info-card glass-panel">
+          <div class="info-icon"><i class="fa-brands fa-github"></i></div>
+          <div class="info-details">
+            <p>Code Repositories</p>
+            <a href="https://github.com/vaibhavchauhan9" target="_blank">github.com/vaibhavchauhan9</a>
+          </div>
+        </div>
+
+        <div class="info-card glass-panel">
+          <div class="info-icon"><i class="fa-brands fa-linkedin"></i></div>
+          <div class="info-details">
+            <p>Professional Network</p>
+            <a href="https://in.linkedin.com/in/vaibhav-kumar-chauhan-65541b367" target="_blank">LinkedIn Profile</a>
+          </div>
+        </div>
+
+        <div class="info-card glass-panel">
+          <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+          <div class="info-details">
+            <p>Operational Base</p>
+            <span>Ghaziabad, Uttar Pradesh, India</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form-panel glass-panel">
+        <form id="portfolioContactForm" onsubmit="event.preventDefault(); alert('Message routing simulated successfully!');">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" class="form-control" placeholder="Enter your full name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Identification</label>
+            <input type="email" id="email" class="form-control" placeholder="name@domain.com" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Transmission Body</label>
+            <textarea id="message" class="form-control" placeholder="Describe the deployment roadmap or opportunity details..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%; border: none; margin-top: 1rem;">Dispatch Message</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Vaibhav Kumar. Engineered with modern UI/UX design components. Ghaziabad, UP, India.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

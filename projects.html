@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects Portfolio | Vaibhav Kumar</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <header>
+    <nav class="nav-container glass-panel">
+      <a href="index.html" class="logo">Vaibhav<span>Kumar</span></a>
+      <button class="menu-btn" id="menuBtn">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li>
+          <button class="theme-toggle" id="themeToggle">
+            <i class="fa-solid fa-sun"></i>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="section-header">
+      <h1>Featured <span>Deployments</span></h1>
+    </div>
+
+    <div class="projects-grid">
+      <!-- Project 1 -->
+      <div class="project-card glass-panel">
+        <div class="project-title">Task Tracker Application</div>
+        <div class="project-desc">A production-ready full-stack Task Management application featuring JWT Authentication, isolated user-wise task databases, full CRUD operations, advanced status/priority filtering, real-time stats dashboard, and overdue detection.</div>
+        <div class="tags-list" style="margin-bottom: 1.5rem;">
+          <span class="tag">MongoDB</span>
+          <span class="tag">Express.js</span>
+          <span class="tag">React</span>
+          <span class="tag">Node.js</span>
+          <span class="tag">JWT Auth</span>
+          <span class="tag">Bcrypt</span>
+        </div>
+        <div class="project-links">
+          <a href="https://task-tracker-ruby-delta.vercel.app" target="_blank" class="btn btn-primary"><i class="fa-solid fa-arrow-up-right-from-square" style="margin-right: 8px;"></i> Live App</a>
+          <a href="https://task-tracker-urfl.onrender.com" target="_blank" class="btn btn-secondary"><i class="fa-solid fa-server" style="margin-right: 8px;"></i> API</a>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-card glass-panel">
+        <div class="project-title">Fashion Hub Platform</div>
+        <div class="project-desc">A fully responsive, modern online marketplace featuring dynamic client-side item lists, clean product showcasing, integrated search indexes, and custom filtering components.</div>
+        <div class="tags-list" style="margin-bottom: 1.5rem;">
+          <span class="tag">HTML5</span>
+          <span class="tag">CSS3</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">Responsive Design</span>
+        </div>
+        <div class="project-links">
+          <a href="https://fashion-hub-livid.vercel.app/" target="_blank" class="btn btn-primary"><i class="fa-solid fa-arrow-up-right-from-square" style="margin-right: 8px;"></i> Live App</a>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-card glass-panel">
+        <div class="project-title">AXT / Attitude X Platform</div>
+        <div class="project-desc">A premium modern online shopping and custom t-shirt marketplace engineered with specialized focus on high-fidelity interactive UI/UX components and fluid device responsiveness.</div>
+        <div class="tags-list" style="margin-bottom: 1.5rem;">
+          <span class="tag">JavaScript</span>
+          <span class="tag">UI/UX Design</span>
+          <span class="tag">Web Development</span>
+        </div>
+        <div class="project-links">
+          <span class="btn btn-secondary" style="cursor: default;"><i class="fa-solid fa-code-commit" style="margin-right: 8px;"></i> Core UI Focus</span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Vaibhav Kumar. Engineered with modern UI/UX design components. Ghaziabad, UP, India.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

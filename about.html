@@ -11,17 +11,26 @@
 
   <header>
     <nav class="nav-container glass-panel">
-      <a href="index.html" class="logo">Vaibhav<span>Kumar</span></a>
-      <button class="menu-btn" id="menuBtn">
-        <i class="fa-solid fa-bars"></i>
-      </button>
+      <a href="index.html" class="logo">V<span>K</span></a>
+      
+      <!-- Right-side mobile controls container -->
+      <div style="display: flex; align-items: center; gap: 1rem;">
+        <button class="theme-toggle mobile-only-toggle" id="themeToggleMobile" aria-label="Toggle Theme">
+          <i class="fa-solid fa-sun"></i>
+        </button>
+        <button class="menu-btn" id="menuBtn" aria-label="Toggle Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+
       <ul class="nav-links" id="navLinks">
         <li><a href="index.html">Home</a></li>
-        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="about.html">About</a></li>
         <li><a href="projects.html">Projects</a></li>
         <li><a href="contact.html">Contact</a></li>
-        <li>
-          <button class="theme-toggle" id="themeToggle">
+        <!-- Desktop theme toggle -->
+        <li class="desktop-only-toggle">
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle Theme">
             <i class="fa-solid fa-sun"></i>
           </button>
         </li>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Vaibhav Kumar Chauhan</title>
+  <meta name="description" content="Get in touch with Vaibhav Kumar Chauhan for Full Stack Developer internship and job opportunities. Reach out via email, LinkedIn, or GitHub.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://YOUR-DOMAIN-HERE.vercel.app/contact.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contact Vaibhav Kumar Chauhan">
+  <meta property="og:description" content="Get in touch for Full Stack Developer internship and job opportunities.">
+  <meta property="og:image" content="https://YOUR-DOMAIN-HERE.vercel.app/assets/og-image.jpg">
+  <meta property="og:url" content="https://YOUR-DOMAIN-HERE.vercel.app/contact.html">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Contact Vaibhav Kumar Chauhan">
+  <meta name="twitter:image" content="https://YOUR-DOMAIN-HERE.vercel.app/assets/og-image.jpg">
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
+  <header>
+    <nav class="nav-container glass-panel">
+      <a href="index.html" class="logo">V<span>K</span></a>
+      <div style="display: flex; align-items: center; gap: 1rem;">
+        <button class="theme-toggle mobile-only-toggle" id="themeToggleMobile" aria-label="Toggle Theme">
+          <i class="fa-solid fa-sun"></i>
+        </button>
+        <button class="menu-btn" id="menuBtn" aria-label="Toggle Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+        <li class="desktop-only-toggle">
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle Theme">
+            <i class="fa-solid fa-sun"></i>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <div class="section-header reveal">
+      <h1>Get In <span>Touch</span></h1>
+    </div>
+
+    <div class="contact-container">
+      <div class="contact-info reveal">
+        <a href="mailto:vaibhavkumarvk143674@gmail.com" class="info-card glass-panel" style="text-decoration: none;">
+          <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+          <div class="info-details">
+            <p>Email</p>
+            <span>vaibhavkumarvk143674@gmail.com</span>
+          </div>
+        </a>
+
+        <a href="https://github.com/vaibhavchauhan9" target="_blank" rel="noopener" class="info-card glass-panel" style="text-decoration: none;">
+          <div class="info-icon"><i class="fa-brands fa-github"></i></div>
+          <div class="info-details">
+            <p>Code Repositories</p>
+            <span>github.com/vaibhavchauhan9</span>
+          </div>
+        </a>
+
+        <a href="https://in.linkedin.com/in/vaibhav-kumar-chauhan-65541b367" target="_blank" rel="noopener" class="info-card glass-panel" style="text-decoration: none;">
+          <div class="info-icon"><i class="fa-brands fa-linkedin"></i></div>
+          <div class="info-details">
+            <p>Professional Network</p>
+            <span>LinkedIn Profile</span>
+          </div>
+        </a>
+
+        <div class="info-card glass-panel">
+          <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+          <div class="info-details">
+            <p>Location</p>
+            <span>Ghaziabad, Uttar Pradesh, India</span>
+          </div>
+        </div>
+
+        <a href="assets/Vaibhav_Kumar_Chauhan_Resume.pdf" download class="info-card glass-panel" style="text-decoration: none;">
+          <div class="info-icon"><i class="fa-solid fa-file-arrow-down"></i></div>
+          <div class="info-details">
+            <p>Resume</p>
+            <span>Download PDF</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="contact-form-panel glass-panel reveal">
+        <form id="portfolioContactForm" novalidate>
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" class="form-control" placeholder="Enter your full name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Your Email</label>
+            <input type="email" id="email" class="form-control" placeholder="name@domain.com" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" class="form-control" placeholder="Tell me about the opportunity or project..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%; border: none; margin-top: 1rem;">Send Message</button>
+          <p id="formStatus" class="form-status" role="status" aria-live="polite"></p>
+          <p style="color: var(--text-secondary); font-size: 0.8rem; margin-top: 0.75rem;">This form opens your email client with your message pre-filled — no data is stored or sent through a server.</p>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Vaibhav Kumar Chauhan. Built with vanilla HTML, CSS & JavaScript. Ghaziabad, UP, India.</p>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+  <script src="script.js"></script>
+</body>
+</html>

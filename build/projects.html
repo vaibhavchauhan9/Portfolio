@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Vaibhav Kumar Chauhan</title>
+  <meta name="description" content="Explore Full Stack Developer Vaibhav Kumar Chauhan's projects, including a MERN Task Tracker, an e-commerce platform, and a responsive fashion marketplace.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://YOUR-DOMAIN-HERE.vercel.app/projects.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Projects | Vaibhav Kumar Chauhan">
+  <meta property="og:description" content="MERN Task Tracker, AXT E-Commerce Platform, and Fashion Hub — full stack projects by Vaibhav Kumar Chauhan.">
+  <meta property="og:image" content="https://YOUR-DOMAIN-HERE.vercel.app/assets/og-image.jpg">
+  <meta property="og:url" content="https://YOUR-DOMAIN-HERE.vercel.app/projects.html">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Projects | Vaibhav Kumar Chauhan">
+  <meta name="twitter:image" content="https://YOUR-DOMAIN-HERE.vercel.app/assets/og-image.jpg">
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
+  <header>
+    <nav class="nav-container glass-panel">
+      <a href="index.html" class="logo">V<span>K</span></a>
+      <div style="display: flex; align-items: center; gap: 1rem;">
+        <button class="theme-toggle mobile-only-toggle" id="themeToggleMobile" aria-label="Toggle Theme">
+          <i class="fa-solid fa-sun"></i>
+        </button>
+        <button class="menu-btn" id="menuBtn" aria-label="Toggle Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li class="desktop-only-toggle">
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle Theme">
+            <i class="fa-solid fa-sun"></i>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <div class="section-header reveal">
+      <h1>Featured <span>Deployments</span></h1>
+    </div>
+
+    <div class="filter-bar reveal">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="react">React</button>
+      <button class="filter-btn" data-filter="node">Node.js / Backend</button>
+      <button class="filter-btn" data-filter="vanilla">HTML/CSS/JS</button>
+    </div>
+
+    <div class="projects-grid">
+      <!-- Project 1 -->
+      <div class="project-card glass-panel reveal" data-tech="react,node">
+        <div class="project-title">Task Tracker Application</div>
+        <div class="project-desc">A production-ready full-stack Task Management application featuring JWT authentication, isolated user-wise task databases, full CRUD operations, advanced status/priority filtering, a real-time stats dashboard, and overdue-task detection.</div>
+        <div class="tags-list" style="margin-bottom: 1.5rem;">
+          <span class="tag">MongoDB</span>
+          <span class="tag">Express.js</span>
+          <span class="tag">React</span>
+          <span class="tag">Node.js</span>
+          <span class="tag">JWT Auth</span>
+          <span class="tag">Bcrypt</span>
+        </div>
+        <div class="project-links">
+          <a href="https://task-tracker-ruby-delta.vercel.app" target="_blank" rel="noopener" class="btn btn-primary"><i class="fa-solid fa-arrow-up-right-from-square" style="margin-right: 8px;"></i> Live App</a>
+          <a href="https://task-tracker-urfl.onrender.com" target="_blank" rel="noopener" class="btn btn-secondary"><i class="fa-solid fa-server" style="margin-right: 8px;"></i> API</a>
+        </div>
+        <div class="project-extra">
+          <h4>Challenges</h4>
+          <p>Keeping task data properly isolated per user while still allowing fast filtering required careful schema design and indexing in MongoDB, plus securing routes with JWT middleware.</p>
+          <h4>Future Improvements</h4>
+          <p>Add drag-and-drop Kanban boards, team/shared workspaces, and email reminders for approaching deadlines.</p>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-card glass-panel reveal" data-tech="vanilla">
+        <div class="project-title">Fashion Hub Platform</div>
+        <div class="project-desc">A fully responsive, modern online marketplace featuring dynamic client-side item lists, clean product showcasing, integrated search, and custom filtering components.</div>
+        <div class="tags-list" style="margin-bottom: 1.5rem;">
+          <span class="tag">HTML5</span>
+          <span class="tag">CSS3</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">Responsive Design</span>
+        </div>
+        <div class="project-links">
+          <a href="https://fashion-hub-livid.vercel.app/" target="_blank" rel="noopener" class="btn btn-primary"><i class="fa-solid fa-arrow-up-right-from-square" style="margin-right: 8px;"></i> Live App</a>
+        </div>
+        <div class="project-extra">
+          <h4>Challenges</h4>
+          <p>Building smooth client-side search and filtering without a backend meant optimizing plain JavaScript DOM updates to stay fast on mobile devices.</p>
+          <h4>Future Improvements</h4>
+          <p>Connect to a real product API, add a cart and checkout flow, and introduce wishlist functionality.</p>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-card glass-panel reveal" data-tech="react,vanilla">
+        <div class="project-title">AXT — E-Commerce Platform</div>
+        <div class="project-desc">A production-ready e-commerce website inspired by Amazon and Flipkart, featuring responsive product listings, categories, search, a shopping cart, and a modern UI with smooth animations and fast performance.</div>
+        <div class="tags-list" style="margin-bottom: 1.5rem;">
+          <span class="tag">React</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">HTML5</span>
+          <span class="tag">CSS3</span>
+          <span class="tag">Vercel</span>
+        </div>
+        <div class="project-links">
+          <a href="https://axt-ecommerce.vercel.app" target="_blank" rel="noopener" class="btn btn-primary"><i class="fa-solid fa-arrow-up-right-from-square" style="margin-right: 8px;"></i> Live Demo</a>
+          <a href="https://github.com/vaibhavchauhan9" target="_blank" rel="noopener" class="btn btn-secondary"><i class="fa-brands fa-github" style="margin-right: 8px;"></i> GitHub Profile</a>
+        </div>
+        <div class="project-extra">
+          <h4>Challenges</h4>
+          <p>Balancing a rich, animated UI with fast load times across devices required careful component structuring and image/asset optimization.</p>
+          <h4>Future Improvements</h4>
+          <p>Add a real payment gateway integration, order history, and an admin dashboard for inventory management.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Vaibhav Kumar Chauhan. Built with vanilla HTML, CSS & JavaScript. Ghaziabad, UP, India.</p>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+  <script src="script.js"></script>
+</body>
+</html>

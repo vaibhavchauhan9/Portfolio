@@ -110,6 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initProjectFilter();
   initBackToTop();
   initContactForm();
+  initProfilePhotoSwap();
 });
 
 /**
@@ -280,5 +281,33 @@ function initContactForm() {
       status.textContent = 'Opening your email client to send this message…';
       status.className = 'form-status success';
     }
+  });
+}
+
+/**
+ * Click-to-swap profile photo (index.html hero avatar).
+ * Clicking the photo toggles it with a second photo, back and forth (loop),
+ * with a quick fade cross-transition.
+ */
+function initProfilePhotoSwap() {
+  const img = document.getElementById('profileImg');
+  if (!img) return;
+
+  const primarySrc = img.getAttribute('src');
+  const altSrc = img.dataset.altSrc;
+  if (!altSrc) return;
+
+  img.style.transition = 'opacity 0.25s ease';
+
+  img.addEventListener('click', () => {
+    const showingAlt = img.dataset.showingAlt === 'true';
+    const nextSrc = showingAlt ? primarySrc : altSrc;
+
+    img.style.opacity = '0';
+    setTimeout(() => {
+      img.src = nextSrc;
+      img.dataset.showingAlt = showingAlt ? 'false' : 'true';
+      img.style.opacity = '1';
+    }, 250);
   });
 }

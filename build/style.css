@@ -190,7 +190,8 @@ main {
 
 .cta-group {
   display: flex;
-  gap: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1.25rem;
 }
 
 .btn {
@@ -240,7 +241,7 @@ main {
   position: relative;
   width: 340px;
   height: 340px;
-  margin: 0 auto; /* Perfectly centers the unit in the grid container */
+  margin: 0 auto;
 }
 
 .rgb-glow-circle {
@@ -251,13 +252,12 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden; /* Encapsulates the tracking gradients safely */
+  overflow: hidden;
   transition: transform var(--transition-speed) cubic-bezier(0.4, 0, 0.2, 1);
   box-sizing: border-box;
   z-index: 1;
 }
 
-/* Linear color animation tracker block */
 .rgb-glow-circle::before {
   content: '';
   position: absolute;
@@ -274,7 +274,6 @@ main {
   animation: continuousRGB 4s linear infinite;
 }
 
-/* Ambient structural diffuse layer shadow */
 .avatar-container::after {
   content: '';
   position: absolute;
@@ -296,14 +295,13 @@ main {
   z-index: 0;
   pointer-events: none;
   animation: continuousRGB 4s linear infinite;
-  transform: translate(-50%, -50%); /* Locks calculations strictly centered */
+  transform: translate(-50%, -50%);
   transform-origin: 0 0;
 }
 
-/* Mask frame layer determining border ring thickness size */
 .profile-inner-frame {
   position: relative;
-  width: calc(100% - 6px); /* 3px border ring configuration */
+  width: calc(100% - 6px);
   height: calc(100% - 6px);
   background: var(--bg-primary);
   border-radius: 50%;
@@ -359,7 +357,6 @@ main {
   color: var(--accent);
 }
 
-/* About Section Layout Architecture */
 .about-grid {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
@@ -451,6 +448,11 @@ main {
   flex-direction: column;
   height: 100%;
   padding: 2rem;
+  transition: transform var(--transition-speed), border-color var(--transition-speed), box-shadow var(--transition-speed), opacity 0.3s ease;
+}
+
+.project-card.hidden-project {
+  display: none;
 }
 
 .project-title {
@@ -478,6 +480,27 @@ main {
   font-size: 0.85rem;
 }
 
+.project-extra {
+  border-top: 1px solid var(--glass-border);
+  margin-top: 1.25rem;
+  padding-top: 1.25rem;
+}
+
+.project-extra h4 {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--accent);
+  margin-bottom: 0.4rem;
+}
+
+.project-extra p {
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  line-height: 1.55;
+  margin-bottom: 0.9rem;
+}
+
 /* Contact Grid & Clickable Interfaces */
 .contact-container {
   display: grid;
@@ -488,7 +511,7 @@ main {
 .contact-info {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 .info-card {
@@ -578,6 +601,15 @@ textarea.form-control {
   min-height: 120px;
 }
 
+.form-status {
+  font-size: 0.9rem;
+  margin-top: 1rem;
+  min-height: 1.2rem;
+}
+
+.form-status.success { color: #22c55e; }
+.form-status.error { color: #ef4444; }
+
 /* Footer Element */
 footer {
   padding: 2rem 5%;
@@ -620,6 +652,14 @@ footer p {
   
   .avatar-container {
     order: -1;
+  }
+
+  .stats-strip {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .featured-project-card {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -670,7 +710,6 @@ footer p {
     grid-template-columns: 1fr;
   }
   
-  /* Responsive sizing rules for the looping profile vector */
   .avatar-container {
     width: 260px;
     height: 260px;
@@ -719,6 +758,8 @@ button:focus-visible,
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 /* ==========================================================================
@@ -805,7 +846,6 @@ html {
   margin-right: 0.5rem;
 }
 
-/* Featured project teaser on the homepage */
 .home-section-header {
   margin: 5rem 0 2.5rem 0;
   text-align: center;
@@ -955,7 +995,7 @@ html {
 }
 
 /* ==========================================================================
-   Project filters + expanded card details
+   Project filters
    ========================================================================== */
 .filter-bar {
   display: flex;
@@ -985,35 +1025,6 @@ html {
   background: var(--accent);
   color: #0a0f1d;
   border-color: var(--accent);
-}
-
-.project-card {
-  transition: transform var(--transition-speed), border-color var(--transition-speed), box-shadow var(--transition-speed), opacity 0.3s ease;
-}
-
-.project-card.hidden-project {
-  display: none;
-}
-
-.project-extra {
-  border-top: 1px solid var(--glass-border);
-  margin-top: 1.25rem;
-  padding-top: 1.25rem;
-}
-
-.project-extra h4 {
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  color: var(--accent);
-  margin-bottom: 0.4rem;
-}
-
-.project-extra p {
-  color: var(--text-secondary);
-  font-size: 0.88rem;
-  line-height: 1.55;
-  margin-bottom: 0.9rem;
 }
 
 /* ==========================================================================
@@ -1049,35 +1060,8 @@ html {
 }
 
 /* ==========================================================================
-   Contact page fixes / enhancements
-   ========================================================================== */
-.contact-info {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.form-status {
-  font-size: 0.9rem;
-  margin-top: 1rem;
-  min-height: 1.2rem;
-}
-
-.form-status.success { color: #22c55e; }
-.form-status.error { color: #ef4444; }
-
-/* ==========================================================================
    Responsive tweaks for new components
    ========================================================================== */
-@media (max-width: 968px) {
-  .stats-strip {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .featured-project-card {
-    grid-template-columns: 1fr;
-  }
-}
-
 @media (max-width: 640px) {
   .stats-strip {
     grid-template-columns: repeat(2, 1fr);
